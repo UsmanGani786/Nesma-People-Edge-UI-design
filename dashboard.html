@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>:: EDGE</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet'>
+	<link href="css/vertical-responsive-menu.min.css" rel="stylesheet">
+	<link href="css/demo.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	
+	<!--donut chart-->	  
+    <link rel="stylesheet" href="css/simple-donut.css" type="text/css">
+	<!-- Calendar-->
+	<link rel="stylesheet" href="css/style_cal.css">
+        
+    <!-- Swiper -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet" />
+	
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   <header class="header clearfix show-xs hidden-md hidden-lg">
+    <button type="button" id="toggleMenu" class="toggle_menu">      
+      <i class="fa fa-bars"></i>   
+    </button>
+		<a href="#"> <img src="img/logo.png" class="img-responsive logo center-block"/>
+  </header>
+	<div class="main_container">
+  <nav class="vertical_nav">
+	
+    <ul id="js-menu" class="menu">
+	<li>
+	<header class="header clearfix hidden-xs">   
+		<a href="#"> <img src="img/logo.png" class="img-responsive logo center-block"/>
+  </header>
+
+  
+  </li>
+		<li> 
+		<button id="collapse_menu" class="collapse_menu hidden-xs">
+      <i class="collapse_menu--icon  fa fa-fw"></i>
+      <span class="collapse_menu--label"></span>
+    </button>
+	<div class="clearfix"></div>
+	</li>
+      <!--<li class="menu--item  menu--item__has_sub_menu">
+
+        <label class="menu--link" title="Item 1">
+          <i class="menu--icon  fa fa-fw fa-user"></i>
+          <span class="menu--label">Item 1</span>
+        </label>
+
+        <ul class="sub_menu">
+          <li class="sub_menu--item">
+            <a href="http://google.com" target="_blank" class="sub_menu--link sub_menu--link__active">Submenu</a>
+          </li>
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
+          </li>
+          <li class="sub_menu--item">
+            <a href="#" class="sub_menu--link">Submenu</a>
+          </li>
+        </ul>
+      </li>-->
+
+      <li class="menu--item">
+        <a href="#" class="menu--link link_active" title="Dashboard">
+          <img src="img/icons/Dashboard_Gray.png" class="menu--icon" />
+          <span class="menu--label">Dashboard</span>
+        </a>
+      </li>
+
+      <li class="menu--item">
+        <a href="#" class="menu--link" title="Payroll">
+          <img src="img/icons/Payroll_gray.png" class="menu--icon" />
+          <span class="menu--label">Payroll</span>
+        </a>
+      </li>
+
+     
+      <li class="menu--item">
+        <a href="#" class="menu--link" title="Leaves">
+          <img src="img/icons/Leaves_gray.png" class="menu--icon" />
+          <span class="menu--label">Leaves</span>
+        </a>
+      </li>
+	  <li class="menu--item">
+        <a href="#" class="menu--link" title="Item 5">
+           <img src="img/icons/Reimburse_gray.png" class="menu--icon" />
+          <span class="menu--label">Reimburse</span>
+        </a>
+      </li>
+	   <li class="menu--item">
+        <a href="#" class="menu--link" title="Recruit">
+           <img src="img/icons/Recruit_gray.png" class="menu--icon" />
+          <span class="menu--label">Recruit</span>
+        </a>
+      </li>
+	  <li class="menu--item">
+        <a href="#" class="menu--link" title="Appraisal">
+           <img src="img/icons/Appraisel_gray.png" class="menu--icon" />
+          <span class="menu--label">Appraisal</span>
+        </a>
+      </li>
+		<li class="menu--item">
+        <a href="#" class="menu--link" title="Training">
+           <img src="img/icons/Training_gray.png" class="menu--icon" />
+          <span class="menu--label">Training</span>
+        </a>
+      </li>
+	  <li class="menu--item">
+        <a href="#" class="menu--link" title="Services">
+           <img src="img/icons/Services_gray.png" class="menu--icon" />
+          <span class="menu--label">Services</span>
+        </a>
+      </li>
+	  <li class="menu--item">
+        <a href="#" class="menu--link" title="Admin">
+           <img src="img/icons/Admin_gray.png" class="menu--icon" />
+          <span class="menu--label">Admin</span>
+        </a>
+      </li>
+    </ul>
+
+   
+
+  </nav>
+
+
+  <div class="wrapper">
+	
+	<div class="header_bar">
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse no-pad" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	  <!-- Page Heading-->
+        <li><a href="#" Class="main_head"><b> DASHBOARD </b></a></li>
+        
+      </ul>
+       <form class="navbar-form navbar-left">
+         <div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1"> <i class="menu--icon  fa fa-fw fa-search" style="font-size:18px;"> </i> </span>
+		  <input type="text" class="form-control" placeholder="Search All" aria-describedby="basic-addon1">
+		</div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+		 <li class="dropdown boxes">
+          <a href="#" class="dropdown-toggle boxes" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-th" aria-hidden="true" ></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            
+          </ul>
+        </li>
+        <li>
+			<select class="sel_lang">
+            <option>Arabic</option>
+             <option>French</option>
+            
+			</select>
+        </li>
+		 <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell-o" aria-hidden="true" style="font-weight: bold;"></i> <span class="notification">2</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            
+          </ul>
+        </li>
+		 <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Rajesh Kumar</b> &nbsp; <img src="img/profile_img.png" class="profile" /></a>
+          <ul class="dropdown-menu" style="margin-top: -8px !important;">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+			<li><a href="#">Logout</a></li>
+            
+          </ul>
+        </li>
+		
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+	<!-- content comes here -->
+	<div class="col-sm-3 col-md-3 card dash_profile_info">
+		<div class="dash_head">
+			<p> <i class="zmdi zmdi-account-o zmdi-hc-fw"></i> Profile</p>
+		</div>
+		<div class="dash_profile text-center">
+			<img src="img/profile_img.png" class="center-block dsh_pic">
+		</div>
+		<div class="user_info text-center">
+			<h3>RAJESH KUMR</h3>
+			<p>Project Manager</p>
+			<p>ID: NES0045</p>
+		</div>
+		<br />
+	</div>
+	<div class="col-sm-6 col-md-6">
+		<div class="donut card">
+		<div class="dash_head">
+			<p><i class="zmdi zmdi-delicious zmdi-hc-fw"></i> My Leave Balance</p>			
+			</div>
+			
+			<ul class="leave_charts">
+				<li>
+					<div id="specificChart" class="donut-size sick">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num cyn_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>SICK LEAVES</p>
+				</li>
+				<li>
+					<div id="specificChart" class="donut-size casual">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num grn_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>CASUAL</p>
+				</li>
+				<li>
+					<div id="specificChart" class="donut-size met">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num bri_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>MATERNITY</p>
+				</li>
+				<li>
+					<div id="specificChart" class="donut-size mat">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num pin_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>MATERNITY</p>
+				</li>
+				</ul>
+				<div class="clearfix"></div>
+				<ul class="leave_charts">
+				<li>
+					<div id="specificChart" class="donut-size wp">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num red_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>LEAVE WP</p>
+				</li>
+				<li>
+					<div id="specificChart" class="donut-size mar">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num yel_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>MARRIAGE</p>
+				</li>
+				<li>
+					<div id="specificChart" class="donut-size ann">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num grn2_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>ANNUAL</p>
+				</li>
+				
+				<li>
+					<div id="specificChart" class="donut-size lea">
+						  <div class="pie-wrapper">
+							<span class="label">
+							  <span class="num bro_txt">60</span> / <span class="">100</span>
+							</span>
+							<div class="pie">
+							  <div class="left-side half-circle"></div>
+							  <div class="right-side half-circle"></div>
+							</div>
+							<div class="shadow"></div>
+						  </div>
+						</div>
+						<p>LEAVE WP</p>
+				</li>
+				
+			</ul>
+			
+		</div>
+	</div>
+	<div class="col-sm-3 col-md-3 card apply_leave text-center">
+	<a href="#">
+	
+		<img src="img/leave.png" alt="leave" class="img-responsive center-block" />
+		<h4 style="margin-top:20px"><b>APPLY A LEAVE</b></h4>
+	</a>
+	</div>
+	
+	<div class="clearfix"></div>
+	
+	<div class="col-sm-8 col-md-8 left_block">
+		<!-- Payslips -->
+		<div class="payslips card">
+			<div class="dash_head">
+				<p><i class="zmdi zmdi-attachment-alt zmdi-hc-fw"></i> Payslips</p>
+			</div>			
+			<br>
+			
+			 <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+      <div class="swiper-slide" data-toggle="modal" data-target=".bs-example-modal-lg"><img src="img/payslip.png" class="pdf img-responsive" /></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+	
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+		<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">March 2018 Payslip</h4>
+      </div>
+	  <div class="modal-body">
+        <iframe src="img/test.pdf" class="center-block" width="100%" height="600"/></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+		</div>
+		
+		<!-- My Attactments -->
+		<div class="attachments card">
+			<div class="dash_head">
+				<p><i class="zmdi zmdi-attachment-alt zmdi-hc-fw"></i> My Attactments</p>
+			</div>			
+			<br>
+			<ul class="list_attach">
+				<li> <p><img src="img/doc-icon.png" /> &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting</p></li>
+				<li> <p><img src="img/doc-icon.png" /> &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting</p></li>
+				<li> <p><img src="img/doc-icon.png" /> &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting</p></li>
+				<li> <p><img src="img/doc-icon.png" /> &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting</p></li>
+				<li> <p><img src="img/doc-icon.png" /> &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting</p></li>
+				<li> <p><img src="img/doc-icon.png" /> &nbsp; Lorem Ipsum is simply dummy text of the printing and typesetting</p></li>
+			
+			</ul>
+			
+			
+		</div>
+		
+		<!-- Performance -->
+		<div class="performance card">	
+			<div class="dash_head">
+				<p><i class="zmdi zmdi-attachment-alt zmdi-hc-fw"></i> My Performance</p>
+			</div>
+			<br>
+			<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>		
+		</div>
+	
+	</div>
+	<div class="col-sm-4 col-md-4 right_block no-pad">
+		<div class="dates_imp card">
+		<div class="dash_head">
+				<p><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i> Important Upcoming Dates</p>
+			</div>
+		
+			<ul class="dates">
+				<li>
+					<p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw grn_bg "></i> &nbsp;  Mahesh Birthday </p>
+					<p class="date pull-right"> 12 Apr</p>
+					<div class="clearfix"></div>
+				</li>
+				<li> <p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw bri_bg"></i> &nbsp;  Ramesh Birthday </p>
+					<p class="date pull-right"> 12 Apr</p>
+						<div class="clearfix"></div>
+				</li>
+				<li> <p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw yel_bg"></i> &nbsp;  Mahesh Birthday </p>
+				<p class="date pull-right"> 12 Apr</p>
+					<div class="clearfix"></div>
+					</li>
+				<li> <p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw grn2_bg"></i> &nbsp;  Krishna Birthday </p> 
+				<p class="date pull-right"> 12 Apr</p>
+					<div class="clearfix"></div>
+					</li>
+				<li>  <p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw blu_bg"></i> &nbsp;   Mahesh Birthday </p>
+				<p class="date pull-right"> 12 Apr</p>
+					<div class="clearfix"></div>
+					</li>
+				<li> <p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw red_bg"></i> &nbsp;   Kiran Birthday </p>
+				<p class="date pull-right"> 12 Apr</p>
+					<div class="clearfix"></div>
+					</li>
+				<li> <p class="pull-left"> <i class="zmdi zmdi-card-giftcard zmdi-hc-fw bri_bg"></i> &nbsp;  Mahesh Birthday </p>
+				<p class="date pull-right"> 12 Apr</p>
+					<div class="clearfix"></div>
+					</li>
+				
+			</ul>
+		</div>
+		
+		<div class="calendar card">
+			<div class="dash_head">
+				<p><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i> My Planner</p>
+			</div>
+			  <div id="tempust"></div>
+				<div id="output"><div>
+       
+		
+		</div>
+			
+	</div>
+	
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	 <script src="js/vertical-responsive-menu.min.js"></script>	
+    <script type="text/javascript" src="js/simple-donut-jquery.js"></script>
+	<!-- Hicharts -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+<!-- calender -->
+   <script src="js/tempust.js"></script>
+	   <script>
+	   $(document).ready(function(){	
+		  updateDonutChart('#specificChart', 80, true); 
+		});	     
+    </script>
+	<script>
+		
+
+var ranges = [
+    [1246406400000, 14.3, 27.7],
+    [1246492800000, 14.5, 27.8],
+    [1246579200000, 15.5, 29.6],
+    [1246665600000, 16.7, 30.7],
+    [1246752000000, 16.5, 25.0],
+    [1246838400000, 17.8, 25.7],
+    [1246924800000, 13.5, 24.8],
+    [1247011200000, 10.5, 21.4],
+    [1247097600000, 9.2, 23.8],
+    [1247184000000, 11.6, 21.8],
+    [1247270400000, 10.7, 23.7],
+    [1247356800000, 11.0, 23.3],
+    [1247443200000, 11.6, 23.7],
+    [1247529600000, 11.8, 20.7],
+    [1247616000000, 12.6, 22.4],
+    [1247702400000, 13.6, 19.6],
+    [1247788800000, 11.4, 22.6],
+    [1247875200000, 13.2, 25.0],
+    [1247961600000, 14.2, 21.6],
+    [1248048000000, 13.1, 17.1],
+    [1248134400000, 12.2, 15.5]
+    
+  ],
+  averages = [
+    [1246406400000, 21.5],
+    [1246492800000, 22.1],
+    [1246579200000, 23],
+    [1246665600000, 23.8],
+    [1246752000000, 21.4],
+    [1246838400000, 21.3],
+    [1246924800000, 18.3],
+    [1247011200000, 15.4],
+    [1247097600000, 16.4],
+    [1247184000000, 17.7],
+    [1247270400000, 17.5],
+    [1247356800000, 17.6],
+    [1247443200000, 17.7],
+    [1247529600000, 16.8],
+    [1247616000000, 17.7],
+    [1247702400000, 16.3],
+    [1247788800000, 17.8],
+    [1247875200000, 18.1],
+    [1247961600000, 17.2],
+    [1248048000000, 14.4],
+    [1248134400000, 13.7]
+    
+  ];
+
+
+Highcharts.chart('container', {
+
+  title: {
+    text: 'Performance'
+  },
+
+  xAxis: {
+    type: 'datetime'
+  },
+
+  yAxis: {
+    title: {
+      text: null
+    }
+  },
+
+  tooltip: {
+    crosshairs: true,
+    shared: true,
+    valueSuffix: '°C'
+  },
+
+  legend: {
+  },
+
+  series: [{
+    name: 'Performance',
+    data: averages,
+    zIndex: 1,
+    marker: {
+      fillColor: 'white',
+      lineWidth: 2,
+      lineColor: Highcharts.getOptions().colors[0]
+    }
+  }, {
+    name: 'Range',
+    data: ranges,
+    type: 'arearange',
+    lineWidth: 0,
+    linkedTo: ':previous',
+    color: Highcharts.getOptions().colors[0],
+    fillOpacity: 0.8,
+    zIndex: 0,
+    marker: {
+      enabled: false
+    }
+  }]
+});
+	</script>
+	 <script>
+            $("#tempust").tempust({
+                date: new Date("2017/12/12"),
+                offset: 1,
+                events: {
+                    "2017/12/12": $("<div>jQueryScript Event</div>")
+                }
+            });
+            $("#tempust").on("changeDate", function (event) {
+                $("#output")
+                .append("Date Changed!")
+                .append("<br/>");
+            });
+        </script>
+		 <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: null,
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  </body>
+</html>
