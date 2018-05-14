@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 *,ul{margin:0; padding:0;}
-body{font-family: 'Montserrat', sans-serif; background:#f9f8fd; color:#565656 !important; font-size:13px; overflow-x:hidden;}
+body{font-family: 'Montserrat', sans-serif; background:#f2f3fa; color:#565656 !important; font-size:13px; overflow-x:hidden;}
 .no-pad{padding-left:0 !important; padding-right: 0!important;}
 .no-marg{margin-left:0 !important; margin-right: 0!important;}
 .heading{color: #8C8887; font-size: 40px; margin: 7% auto;max-width: 436px;}
@@ -87,16 +87,27 @@ input:checked + .slider:before {
 
 /* Login */
 
-.login_form{max-width:300px; float:right; margin-top: 140px; margin-right: 110px;}
+.login_form{max-width:300px; float:right; margin-top: 160px; margin-right: 160px;}
 .login_form .input-group-addon{background:#fff; border-top-left-radius:30px; border-bottom-left-radius:30px;}
 .login_form input{border-left:0; border-radius:30px;}
 .login_form input:focus{box-shadow:none !important; outline:none !important;}
 .login_form .fa{font-size:16px;}
 .login_form .btn{border-radius:30px;}
 
-.loginbg {background: url("../img/login-bg.png") no-repeat 0px -50px;}
-.login_form_bg{background: url("../img/oval.png") no-repeat; float: right; width: 627px; height: 484px; margin-top: -110px;}
+.loginbg {background: url("../img/login-bg.png") no-repeat 0px -70px; padding-bottom:10px;}
+.login_form_bg{background: url("../img/oval.png") no-repeat; float: right; width: 627px; height: 484px; margin-top: -110px; margin-right:100px;}
+.clear{clear:both;}
 
+@media only screen and (max-width: 1024px) {
+	.login_form_bg{width: 427px; margin-top: 40px; margin-right:100px; background-size: contain; height:428px;}
+	.login_form{margin-top:90px; margin-right:50px; }
+    }
+@media only screen and (max-width: 768px) {
+	.login_form_bg{margin-right:0px; margin-top:95px;}
+}
+@media only screen and (max-width: 320px) {
+	.login_form{margin-right:0px; }
+}
 
 /*Layout */
 
@@ -382,7 +393,8 @@ html .fc,
 	background: #bce8f1;
 	opacity: .3;
 	filter: alpha(opacity=30); /* for IE */
-	border: solid 1px #06b8e6;
+	border: solid 2px #06b8e6;
+	border-radius: 5px;
 	}
 	
 
@@ -689,6 +701,7 @@ table.fc-border-separate {
 	   might want to set the 'color' property instead
 	   making day-numbers bold also fixes the problem */
 	}
+.fc-other-month{pointer-events: none; cursor: default;}	
 	
 .fc-grid .fc-day-content {
 	clear: both;

@@ -102,7 +102,7 @@
   margin: 0 auto;
 }
 #time-range {
-  width: 230px;
+  width: 240px;
 }
 
 .timeSelect{
@@ -110,7 +110,7 @@
 	margin:auto;
 }
 .disTime{
-	margin: 30px 0px 0px 25px;
+	margin: 30px 0px 0px 15px;
 	font-size: 17px;
     font-weight: bold;
 	float:left;

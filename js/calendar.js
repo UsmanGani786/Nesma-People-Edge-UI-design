@@ -2575,15 +2575,6 @@ function BasicView(element, calendar, viewName) {
 			rowHeightLast = bodyHeight - rowHeight * (rowCnt-1);
 		}
 		
-		bodyFirstCells.each(function(i, _cell) {
-			if (i < rowCnt) {
-				cell = $(_cell);
-				cell.find('> div').css(
-					'min-height',
-					(i==rowCnt-1 ? rowHeightLast : rowHeight) - vsides(cell)
-				);
-			}
-		});
 		
 	}
 	

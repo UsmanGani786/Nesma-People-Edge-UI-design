@@ -282,6 +282,8 @@
 				</div>
 				
 			</div>
+			
+			
 		</div>
     </div>
   </div>
@@ -360,41 +362,6 @@
 	</table>
 
   </div>
-  
-  
-	<!-- Modal -->
-	<!--<div class="modal fade" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content timeSelect">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<p class="modal-title">Short Leave	</p>
-				</div>
-				<div class="modal-body">
-                
-                <div class="row">
-                    <div class="col-xs-12">
-						
-						<div id="time-range" class="time-range">
-							<div class="sliders_step1">
-								<div id="slider-range"></div>
-							</div>
-							
-						</div>
-						<div class="disTime"><span class="slider-time">9 : 00 AM </span> <div class="spacebar">-</div> <span class="slider-time2">5 : 00 PM</span></div>
-						
-                    </div>
-                </div>
-				
-            </div>
-           
-                <button type="button" class="btn btn-success center-block" id="save-event">Save</button>
-				<br>
-			</div>
-		</div>
-	</div>-->
-
-
 	
 		<div id="addEvent" class="showTime">
 			<div class="leavettl"><p class="leavetitle">Short Leave	</p> <button class="closetime">X</button></div>
@@ -438,38 +405,16 @@
             navLinks: true, // can click day/week names to navigate views
             selectable: true,
             selectHelper: true,
-            dayClick: function(start, end) {
-                // Display the modal.
-                // You could fill in the start and end fields based on the parameters
-                //$('.modal').modal('show');
-			
-            },
-			select: function(start, end, allDay, jsEvent, view){
-				$('#addEvent').css({ left: jsEvent.pageX, top: jsEvent.pageY }).show("slow").fadeIn();
+          
+		  //time popup
+			dayClick: function(start, end, jsEvent, view, allDay){
+				$('#addEvent').css({ left: jsEvent.pageX, top: jsEvent.pageY }).show("slow").fadeIn();				
 			},
 			
-			
-			/*dayClick: function(date, jsEvent, view, resourceObj) {
-				alert('Date: ' + date.format());
-				alert('Resource ID: ' + resourceObj.id);
-
-			  },*/
-            eventClick: function(event, element) {
-                // Display the modal and set the values to the event values.
-                $('.modal').modal('show');
-                $('.modal').find('#title').val(event.title);
-                $('.modal').find('#starts-at').val(event.start);
-                $('.modal').find('#ends-at').val(event.end);
-
-            },
             editable: true,
             eventLimit: true // allow "more" link when too many events
 
         });
-
-        // Bind the dates to datetimepicker.
-        // You should pass the options you need
-        //$("#starts-at, #ends-at").datetimepicker();
 
         // Whenever the user clicks on the "save" button om the dialog
         $('#save-event').on('click', function() {
@@ -484,11 +429,7 @@
             }
             $('#calendar').fullCalendar('unselect');
 
-            // Clear modal inputs
-            $('.modal').find('input').val('');
-
-            // hide modal
-            //$('.modal').modal('hide');
+           
         });
     });
 	
@@ -500,7 +441,7 @@
 		$("#addEvent").hide();
 	});
 	
-	
+	 
 	
 </script>
   </body>
