@@ -168,13 +168,12 @@ a:focus, a:hover{text-decoration:none;}
  
 .search_cont i{font-size: 12px !important;}
 .grid_right{list-style:none;     margin-top: -22px;  float: right;}
-.grid_right li{float:left; margin-left:15px;}
+.grid_right li{float:left; margin-left:10px;}
 .pagination li{ margin-left:0px !important;}
 .grid_right .pagination li a{font-size:16px; }
 .pagination li a:hover, .pagination li a.active{background:#1dbee8; color:#fff !important;}
 .grid_right .lang{padding:7px; top:20px;    background: #fff;	}
-.grid_right .add_leave{background: #1dbee8; color: #fff; padding: 0px 14px; border-radius: 10px; font-size: 24px; width: 0px; width: 40px;width: 40px;
-height: 40px; box-sizing: border-box;  line-height: 40px;  margin-top: 16px;}
+.grid_right .add_leave{background: #1dbee8; color: #fff; padding: 0px 12px; border-radius: 10px; font-size: 24px; width: 36px;height: 36px; box-sizing: border-box; line-height: 36px; margin-top: 20px;}
 .table>thead>tr>th{ text-transform: capitalize !important; color:#888888  !important;}
 .dropdown-menu{margin-top:-15px !important;}
 .grid_right .dropdown-menu {margin-top:2px !important; }
@@ -701,7 +700,7 @@ table.fc-border-separate {
 	   might want to set the 'color' property instead
 	   making day-numbers bold also fixes the problem */
 	}
-.fc-other-month{pointer-events: none; cursor: default;}	
+.fc-other-month, .fc-view-agendaDay, .fc-view-agendaWeek{pointer-events: none; cursor: default;}	
 	
 .fc-grid .fc-day-content {
 	clear: both;
