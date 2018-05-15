@@ -112,10 +112,10 @@ input:checked + .slider:before {
 /*Layout */
 
 .collapse_menu .collapse_menu--icon{float:right !important;width: 27px; height: 40px;  line-height: 26px;  font-size: 14px;}
-.collapse_menu{border: none !important;  background: #09bde2 !important;  display: inline-block;  width: auto;  float: right;  color: #fff;
+.collapse_menu{border: none !important;  background: #09bde2 ;  display: inline-block;  width: auto;  float: right;  color: #fff;
 font-size: 12px !important;      border-top-left-radius: 20px;    border-bottom-left-radius: 20px;    width: 28px;    height: 24px;	margin: 10px 0 -2px 0; position:relative; z-index:999;}
 .vertical_nav{top:-20px;background: #fff; box-shadow: 2px 2px 2px #ccc; height:105vh; position:fixed; z-index:9;}
-.header, .collapse_menu, .collapse_menu:hover{background:transparent;}
+.header, .collapse_menu, .collapse_menu:hover{}
 .header{box-shadow:none !important}
 .vertical_nav__minify header h3{font-size:16px;}
 .logo{margin:20px auto;}
@@ -1197,15 +1197,15 @@ for better animation effect */
 @media(max-width:768px){
 .collapse_menu{background:#fff !important;}
 }
-
+@media(max-width:1200px) {
+	.leave_charts li {margin: 6px 10px;}
+}
 @media(max-width:1024px) and (min-width:768px){
 	.leave_charts li {margin: 6px 5px;}
 	.swiper-slide {padding: 0px 5px;}
 	.leave_charts li{margin: 6px 5px }
 }
 .swiper-slide {padding: 0px 5px;}
-@media(max-width:1200px) {
-	.leave_charts li {margin: 6px 10px;}
-}
+
 
 
