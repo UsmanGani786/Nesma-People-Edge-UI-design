@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  position: relative;
+  position: absolute;
   /*top: 0;
   left: 0;*/
   z-index: 999;
@@ -75,5 +75,5 @@ header h1 {
   .wrapper__minify {
     margin-left: 50px;
   }
-
+	
 }

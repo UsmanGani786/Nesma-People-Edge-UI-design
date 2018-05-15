@@ -113,12 +113,12 @@ input:checked + .slider:before {
 
 .collapse_menu .collapse_menu--icon{float:right !important;width: 27px; height: 40px;  line-height: 26px;  font-size: 14px;}
 .collapse_menu{border: none !important;  background: #09bde2 !important;  display: inline-block;  width: auto;  float: right;  color: #fff;
-font-size: 12px !important;      border-top-left-radius: 20px;    border-bottom-left-radius: 20px;    width: 28px;    height: 24px;	margin: 20px 0 -2px 0;}
-.vertical_nav{top:-20px;background: #fff; box-shadow: 2px 2px 2px #ccc; height:105vh; position:fixed;}
+font-size: 12px !important;      border-top-left-radius: 20px;    border-bottom-left-radius: 20px;    width: 28px;    height: 24px;	margin: 10px 0 -2px 0; position:relative; z-index:999;}
+.vertical_nav{top:-20px;background: #fff; box-shadow: 2px 2px 2px #ccc; height:105vh; position:fixed; z-index:9;}
 .header, .collapse_menu, .collapse_menu:hover{background:transparent;}
 .header{box-shadow:none !important}
 .vertical_nav__minify header h3{font-size:16px;}
-.logo{margin:30px auto;}
+.logo{margin:20px auto;}
 .vertical_nav__minify .collapse_menu .collapse_menu--icon{line-height: 57px;  width: 23px;}
 .menu--icon{width:32px !important; height:auto !important;margin: 6px 10px;}
 .collapse_menu:hover{color:#fff;}
@@ -700,7 +700,7 @@ table.fc-border-separate {
 	   might want to set the 'color' property instead
 	   making day-numbers bold also fixes the problem */
 	}
-.fc-other-month, .fc-view-agendaDay, .fc-view-agendaWeek{pointer-events: none; cursor: default;}	
+.fc-other-month {pointer-events: none; cursor: default;}
 	
 .fc-grid .fc-day-content {
 	clear: both;
@@ -1050,10 +1050,10 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);*/
 .apply_leave a{color:#fff !important;}
 .dash_profile_info, .apply_leave, .donut{height:300px; overflow:auto}
 .leave_charts{}
-.leave_charts li{float:left; margin:6px 19px;text-align:center}
-.leave_charts li:last-child{mar-right:0 !important;}
-.leave_charts li:first-child{mar-left:0 !important;}
-.leave_charts li p{ font-weight:bold; margin:10px auto;}
+.leave_charts li{float:left; margin:6px 25px;text-align:center}
+.leave_charts li:last-child{margin-right:0 !important;}
+.leave_charts li:first-child{margin-left:0 !important;}
+.leave_charts li p{ font-weight:bold; margin:10px auto;font-size: 11px;}
 .left_block{    padding-left: 0 !important;}
 .highcharts-title, .highcharts-credits{display:none !important;}
 .dates li{margin:20px 0;}
@@ -1111,11 +1111,38 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);*/
 	.swiper-slide img{border:1px solid #ccc; box-shadow:1px 1px 1px #ccc}
 	.swiper-slide img:hover{transform:scale(1.1); border:2px solid #1dbee8; transition: all 0.5s; cursor:pointer;box-shadow:2px 2px 2px #ccc}
 	
+.swiper-button-next{right:0px !important;}	
+.swiper-button-prev{left:0px !important;}
+.swiper-button-next, .swiper-button-prev{margin-top:-10px !important;}
+
+.menu--subitens__opened{background:#fff !important;}
+.menu--subitens__opened .sub_menu{background:#f0f0f0;}
+
+.box{
+	float:left;
+	overflow: hidden;
+	background: #f0e68c;
+}
+/* Add padding and border to inner content
+for better animation effect */
+.box-inner{
+	width: 400px;
+	padding: 10px;
 	
-	
-	
-	
-	
+}
+.box {
+    background-color: #fff;
+    width: 75%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    display: none;
+	z-index:9;
+	border: 1px solid #09bde2;
+}
 	
 	
 	
@@ -1151,10 +1178,34 @@ box-shadow: 0px 0px 21px 2px rgba(0,0,0,0.18);*/
     /* margin: 30px auto; */
     float: left;
     margin-top: 12px;
+	}
+	.wrapper{    padding: 15px 10px;}
+	.main_head{margin-left: -91px;}
+
+	
 }
-.wrapper{    padding: 15px 10px;}
-.main_head{margin-left: -91px;}
-}
-@media(min-width:991px){
+@media (min-width:991px){
 	.dash_profile{    margin: 63px auto 25px 68px;}
+	.dashboardholder, .dashboardholder{display:none;}
+	
 }
+@media(max-width:991px){
+	.dashboardholder{display:none;}
+	.leave_charts li {margin: 6px 10px;}
+	.menu .header{display:none;}	
+}
+@media(max-width:768px){
+.collapse_menu{background:#fff !important;}
+}
+
+@media(max-width:1024px) and (min-width:768px){
+	.leave_charts li {margin: 6px 5px;}
+	.swiper-slide {padding: 0px 5px;}
+	.leave_charts li{margin: 6px 5px }
+}
+.swiper-slide {padding: 0px 5px;}
+@media(max-width:1200px) {
+	.leave_charts li {margin: 6px 10px;}
+}
+
+

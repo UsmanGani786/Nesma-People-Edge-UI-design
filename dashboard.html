@@ -158,7 +158,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse no-pad" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav dashboardholder">
 	  <!-- Page Heading-->
         <li><a href="#" Class="main_head"><b> DASHBOARD </b></a></li>
         
@@ -631,9 +631,10 @@ Highcharts.chart('container', {
 		 <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      slidesPerGroup: 3,
+      slidesPerView: 5,
+      spaceBetween: 0,
+      //slidesPerGroup: 3,
+	  
       loop: true,
       loopFillGroupWithBlank: true,
       pagination: {
@@ -645,6 +646,7 @@ Highcharts.chart('container', {
         prevEl: '.swiper-button-prev',
       },
     });
+	
   </script>
   </body>
 </html>
