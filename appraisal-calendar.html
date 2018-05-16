@@ -8,6 +8,7 @@
     <title>:: EDGE</title>
 
     <!-- Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet'>
   <link href="css/vertical-responsive-menu.min.css" rel="stylesheet">
@@ -266,7 +267,7 @@
 				<div class="box appraisal_popup ">
 					<a id="app-close" href="#">X</a>
 					<div class="box-inner container">
-						<h1>Appraisal Type</h1>
+						<h1>Appraisal Calendar</h1>
 						
 						<div class="appr-container">
 							<div class=" col-lg-6 col-md-6 col-sm-6">
@@ -281,49 +282,286 @@
 								  <input type="text" class="form-control" id="usr">
 								</div>
 							</div>
-							<div class="col-lg-12 col-md-12 col-sm-12">
-								<div class="form-group">
-								  <label for="comment">Description:</label>
-								  <textarea class="form-control" rows="5" id="comment"></textarea>
-								</div>
-							</div>
 							<div class=" col-lg-6 col-md-6 col-sm-6">
 								<div class="form-group">
-								  <label for="usr">Appraisal code type:</label>
+								  <label for="usr">Appraisal calendar code type:</label>
 								  <input type="text" class="form-control" id="usr">
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-6">
-								<div class="form-group pddtp30">
-								 
-								  <p class="pull-left"><b>Status :</b></p> &nbsp; &nbsp; 
-									<label class="switch">
-									  <input type="checkbox" checked>
-									  <span class="slider round"></span>
-									</label>
+								<div class="form-group">
+								  <label for="usr">Appraisal calendar code title:</label>
+								  <input type="text" class="form-control" id="usr">
 								</div>
 							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="form-group">
+								  <label for="comment">Appraisal calendar Description:</label>
+								  <textarea class="form-control" rows="5" id="comment"></textarea>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+									<label>From Period</label>
+									<div class='input-group date' id='datetimepicker1'>
+										
+										<input type='text' class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+									<label>To Period</label>
+									<div class='input-group date' id='datetimepicker1'>
+										<input type='text' class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+									<label>Valid Upto</label>
+									<div class='input-group date' id='datetimepicker1'>
+										<input type='text' class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								  <label for="usr">Max Rating %:</label>
+								  <input type="text" class="form-control" id="usr">
+								</div>
+							</div>
+							
+							<div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								  <label for="sel1">Appraisal Status:</label>
+								  <select class="form-control" id="sel1">
+									<option>Draft</option>
+									<option>Draft</option>
+									<option>Draft</option>
+									<option>Draft</option>
+								  </select>
+								 </div> 
+							 </div>
+							 
+							 <div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								  <label for="sel1">Appraisal Method:</label>
+								  <select class="form-control" id="sel1">
+									<option>Draft</option>
+									<option>Draft</option>
+									<option>Draft</option>
+									<option>Draft</option>
+								  </select>
+								 </div> 
+							 </div>
+							
+							<div class="row padding10">							
+								<div class="col-md-4 col-sm-4">
+									<h5>Guidance Document</h5>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<h5><span><i class="fa fa-paperclip" aria-hidden="true"></i></span>Guidance pdf</h5>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<button class="fileup">Browse</button>
+								</div>
+							</div>
+							
+							<div class="row padding10" style="margin-left: 5px;">
+								<div class="col-md-4 col-sm-4">
+									<label class="container">Assignment Specification
+									  <input type="checkbox" class="custcheck">
+									  <span class="checkmark sqarecheck"></span>
+									</label>
+								</div>
+								<div class="col-md-4 col-sm-4">
+									<label class="container">Recommendation Link
+									  <input type="checkbox" class="custcheck">
+									  <span class="checkmark sqarecheck"></span>
+									</label>
+									
+								</div>
+								<div class="col-md-4 col-sm-4">
+									
+									<label class="container">Acceptance by Emplayee
+									  <input type="checkbox" class="custcheck">
+									  <span class="checkmark sqarecheck"></span>
+									</label>
+								</div>
+							
+							</div>
+							
 							<div class="clear"></div>
+							</div>
+							
+							<div class="tbheadr borderbtm">
+								<div class="col-md-10 col-sm-10"><h4>Appraisal Rate Grade</h4></div>
+								<div class="col-md-2 col-sm-2 alignr"><span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span> <span class="addrow"><i class="fa fa-plus" aria-hidden="true"></i></span></div>
 							</div>
 							
 							<div class="tbheadr">
 								<div class="col-md-1 col-sm-1 fixwd" >&nbsp</div>
 								<div class="col-md-1 col-sm-1 offset0 alignr">S.No.</div>
-								<div class="col-md-3 col-sm-3 padlt70">Rating Grade Code</div>
-								<div class="col-md-2 col-sm-2 padlt70">Title</div>
-								<div class="col-md-3 col-sm-3 padlt70">Description</div>
+								<div class="col-md-3 col-sm-3 padlt70">Rating Grade</div>
+								<div class="col-md-2 col-sm-2 padlt70">Rating from</div>
+								<div class="col-md-2 col-sm-2 padlt70">Rating to</div>
+								<div class="col-md-2 col-sm-2 padlt70">Normalize Standard</div>
+							</div>
+							
+							<div class="appr-container">
+								<div class="tbheadr tbcolumn">
+									<div class="col-md-1 col-sm-1">
+										<div class="checkbox">
+										  <label><input type="checkbox" value=""></label>
+										</div>
+									</div>
+									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
+									<div class="col-md-3 col-sm-3 pdtop5">
+										<div class="form-group">
+										  <select class="form-control" id="sel1">
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+										  </select>
+										 </div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 ">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							
+							<div class="appr-container">
+								<div class="tbheadr tbcolumn">
+									<div class="col-md-1 col-sm-1">
+										<div class="checkbox">
+										  <label><input type="checkbox" value=""></label>
+										</div>
+									</div>
+									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
+									<div class="col-md-3 col-sm-3 pdtop5">
+										<div class="form-group">
+										  <select class="form-control" id="sel1">
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+										  </select>
+										 </div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 ">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							
+							<div class="appr-container">
+								<div class="tbheadr tbcolumn">
+									<div class="col-md-1 col-sm-1">
+										<div class="checkbox">
+										  <label><input type="checkbox" value=""></label>
+										</div>
+									</div>
+									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
+									<div class="col-md-3 col-sm-3 pdtop5">
+										<div class="form-group">
+										  <select class="form-control" id="sel1">
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+											<option>Select Grade code</option>
+										  </select>
+										 </div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 ">
+										<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							
+							<div class="tbheadr borderbtm">
+								<div class="col-md-10 col-sm-10"><h4>Appraisal Stage</h4></div>
 								<div class="col-md-2 col-sm-2 alignr"><span class="remove"><i class="fa fa-times" aria-hidden="true"></i></span> <span class="addrow"><i class="fa fa-plus" aria-hidden="true"></i></span></div>
 							</div>
 							
+							<div class="tbheadr">
+								<div class="col-md-1 col-sm-1 fixwd" >&nbsp</div>
+								<div class="col-md-1 col-sm-1 offset0 ">S.No.</div>
+								<div class="col-md-1 col-sm-1 ">Stage</div>
+								<div class="col-md-2 col-sm-2 ">Mandatory/OPT</div>
+								<div class="col-md-1 col-sm-1 ">Role</div>
+								<div class="col-md-2 col-sm-2 ">Include Finalisation</div>
+								<div class="col-md-1 col-sm-1 ">Finalisation %</div>
+								<div class="col-md-2 col-sm-2 alignc">Target Date</div>
+								<div class="col-md-1 col-sm-1 ">Weightage %</div>
+							</div>
+							
 							<div class="appr-container">
 								<div class="tbheadr tbcolumn">
-									<div class="col-md-1 col-sm-1">
+									<div class="" style="margin-left:-50px; float:left;">
 										<div class="checkbox">
 										  <label><input type="checkbox" value=""></label>
 										</div>
 									</div>
+									
 									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
+									<div class="col-md-1 col-sm-1 pdtop5">
+										<div class="form-group">
+											  <input type="text" class="form-control" id="usr">
+										</div>
+									</div>
+									<div class="col-md-2 col-sm-2 pdtop5">
 										<div class="form-group">
 										  <select class="form-control" id="sel1">
 											<option>Select Grade code</option>
@@ -333,140 +571,35 @@
 										  </select>
 										 </div>
 									</div>
-									<div class="col-md-2 col-sm-2 pdtop5">
+									<div class="col-md-1 col-sm-1 pdtop5 marlft25">
 										<div class="form-group">
 										  <input type="text" class="form-control" id="usr">
 										</div>
-									</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
-										<div class="form-group">
-										  <input type="text" class="form-control" id="usr">
-										</div>
-									</div>
-									<div class="col-md-2 col-sm-2 pdtop10 alignr">
-										<label class="container">Active
-										  <input type="checkbox" class="custcheck">
-										  <span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							
-							<div class="appr-container">
-								<div class="tbheadr tbcolumn">
-									<div class="col-md-1 col-sm-1">
-										<div class="checkbox">
-										  <label><input type="checkbox" value=""></label>
-										</div>
-									</div>
-									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
-										<div class="form-group">
-										  <select class="form-control" id="sel1">
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-										  </select>
-										 </div>
 									</div>
 									<div class="col-md-2 col-sm-2 pdtop5">
 										<div class="form-group">
 										  <input type="text" class="form-control" id="usr">
 										</div>
 									</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
+									<div class="col-md-2 col-sm-2 ">
 										<div class="form-group">
 										  <input type="text" class="form-control" id="usr">
 										</div>
 									</div>
-									<div class="col-md-2 col-sm-2 pdtop10 alignr">
-										<label class="container">Active
-										  <input type="checkbox" class="custcheck">
-										  <span class="checkmark"></span>
-										</label>
+									<div class="col-md-1 col-sm-1 pdtop5">
+									<div class="form-group">
+										  <input type="text" class="form-control" id="usr">
+									</div>
+									</div>
+									<div class="col-md-1 col-sm-1 pdtop5 marlft25">
+										<div class="form-group">
+											  <input type="text" class="form-control" id="usr">
+										</div>
 									</div>
 								</div>
+								
 								<div class="clear"></div>
 							</div>
-							
-							<div class="appr-container">
-								<div class="tbheadr tbcolumn">
-									<div class="col-md-1 col-sm-1">
-										<div class="checkbox">
-										  <label><input type="checkbox" value=""></label>
-										</div>
-									</div>
-									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
-										<div class="form-group">
-										  <select class="form-control" id="sel1">
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-										  </select>
-										 </div>
-									</div>
-									<div class="col-md-2 col-sm-2 pdtop5">
-										<div class="form-group">
-										  <input type="text" class="form-control" id="usr">
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
-										<div class="form-group">
-										  <input type="text" class="form-control" id="usr">
-										</div>
-									</div>
-									<div class="col-md-2 col-sm-2 pdtop10 alignr">
-										<label class="container">Active
-										  <input type="checkbox" class="custcheck">
-										  <span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							
-							<div class="appr-container">
-								<div class="tbheadr tbcolumn">
-									<div class="col-md-1 col-sm-1">
-										<div class="checkbox">
-										  <label><input type="checkbox" value=""></label>
-										</div>
-									</div>
-									<div class="col-md-1 col-sm-1 pdtop10 padlft">1</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
-										<div class="form-group">
-										  <select class="form-control" id="sel1">
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-											<option>Select Grade code</option>
-										  </select>
-										 </div>
-									</div>
-									<div class="col-md-2 col-sm-2 pdtop5">
-										<div class="form-group">
-										  <input type="text" class="form-control" id="usr">
-										</div>
-									</div>
-									<div class="col-md-3 col-sm-3 pdtop5">
-										<div class="form-group">
-										  <input type="text" class="form-control" id="usr">
-										</div>
-									</div>
-									<div class="col-md-2 col-sm-2 pdtop10 alignr">
-										<label class="container">Active
-										  <input type="checkbox" class="custcheck">
-										  <span class="checkmark"></span>
-										</label>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							
 						
 						
 					</div>
@@ -482,9 +615,9 @@
 			<thead>
 				<tr>
 					<th>Select</th>
-					<th>Type</th>
-					<th>Appraisal</th>
-					<th>Type Description</th>
+					<th>Calendar Code</th>
+					<th>Calendar Title</th>
+					<th>Calendar Description</th>
 					<th>Status</th>
 					<th>Action</th>
 					
@@ -494,8 +627,8 @@
 			<tbody>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td>Thapp </td>
-					<td>3 Months Appraisal</td>
+					<td>Midyap 2017-1</td>
+					<td>Midyap-2017</td>
 					<td>This Appraisal for 3 Months</td>
 					<td>Yes</td>
 					<td><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> </a> &nbsp; <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
@@ -504,8 +637,8 @@
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td>Thapp </td>
-					<td>3 Months Appraisal</td>
+					<td>Midyap 2017-1 </td>
+					<td>May-Dec</td>
 					<td>This Appraisal for 3 Months</td>
 					<td>Yes</td>
 					<td><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> </a> &nbsp; <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
@@ -513,8 +646,8 @@
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td>Thapp </td>
-					<td>3 Months Appraisal</td>
+					<td>Midyap 2017-1 </td>
+					<td>May-Dec</td>
 					<td>This Appraisal for 3 Months</td>
 					<td>Yes</td>
 					<td><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> </a> &nbsp; <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
@@ -523,8 +656,8 @@
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td>Thapp </td>
-					<td>3 Months Appraisal</td>
+					<td>Midyap 2017-1 </td>
+					<td>May-Dec</td>
 					<td>This Appraisal for 3 Months</td>
 					<td>Yes</td>
 					<td><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> </a> &nbsp; <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
@@ -533,8 +666,8 @@
 				</tr>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td>Thapp </td>
-					<td>3 Months Appraisal</td>
+					<td>Midyap 2017-1 </td>
+					<td>May-Dec</td>
 					<td>This Appraisal for 3 Months</td>
 					<td>Yes</td>
 					<td><a href="#"><i class="fa fa-eye" aria-hidden="true"></i> </a> &nbsp; <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
@@ -576,6 +709,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	 <script src="js/vertical-responsive-menu.min.js"></script>
+	 <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 	 
 	 <script>
 	 $(document).ready(function(){
@@ -594,9 +729,16 @@
 	  
 	  });
 	  
-	  
+	  $(function () {
+			$("#datetimepicker1").datetimepicker({
+				//defaultDate: new Date(),
+				format:'DD/MM/YYYY'
+			});
+			$("#datetimepicker2").datetimepicker();
+		});
 	  
 	});
+	
 	
 	 
 	 </script>
