@@ -80,7 +80,7 @@
           <span class="menu--label">Recruit</span>
         </a>
       </li>
-	  <li class="parent menu--item"><span class="caret"></span>
+	  <li class="parent menu--item"><!--<span class="caret"></span>-->
 		<a href="#" class="menu--link" title="Payroll">
           <img src="img/icons/Payroll_gray.png" class="menu--icon" />
           <span class="menu--label">Appraisal</span>
@@ -349,7 +349,11 @@
 									<h5><span><i class="fa fa-paperclip" aria-hidden="true"></i></span>Guidance pdf</h5>
 								</div>
 								<div class="col-md-4 col-sm-4">
-									<button class="fileup">Browse</button>
+									<div class="upload-btn-wrapper">
+										<button class="fileup">Browse</button>
+										<input id="file-upload" type="file" name="myfile" />
+										<div id="file-upload-filename"></div>
+									</div>
 								</div>
 							</div>
 							
@@ -381,8 +385,8 @@
 							</div>
 							
 							<div class="tbheadr borderbtm">
-								<div class="col-md-10 col-sm-10"><h4>Appraisal Rate Grade</h4></div>
-								<div class="col-md-2 col-sm-2 alignr">
+								<div class="col-md-10 col-sm-9"><h4>Appraisal Rate Grade</h4></div>
+								<div class="col-md-2 col-sm-3 alignr">
 									<span class="remove button-remove"><i class="fa fa-trash" aria-hidden="true"></i></span> 
 									<span class="addrow button-add"><i class="fa fa-plus" aria-hidden="true"></i></span>
 								</div>
@@ -434,7 +438,7 @@
 										  <input type="number" min="0" max="100" class="form-control" id="usr">
 										</div>
 									</div>
-									<div class="col-md-2 col-sm-2 ">
+									<div class="col-md-2 col-sm-1 ">
 										<div class="form-group">
 										  <input type="number" min="0" max="100" class="form-control" id="usr">
 										</div>
@@ -444,12 +448,9 @@
 								<div class="clear"></div>
 							</div>
 							
-							
-							
-							<div class="appr-container repeatctm">
-								<div class="tbheadr tbcolumn repeatctminr">
+							<div class="appr-container">
+								<div class="tbheadr tbcolumn">
 								<div class="row">
-								<div class="boxclone template clonesty" >
 									<div class="col-md-1 col-sm-1">
 										<div class="checkbox">
 										  <label><input type="checkbox" value=""></label>
@@ -459,7 +460,7 @@
 									<div class="col-md-2 col-sm-2 pdtop5">
 										<div class="form-group">
 										  <select class="form-control" id="sel1">
-											<option>120A</option>
+											<option>121A</option>
 											<option>120A</option>
 											<option>120A</option>
 											<option>120A</option>
@@ -481,21 +482,22 @@
 										  <input type="number" min="0" max="100" class="form-control" id="usr">
 										</div>
 									</div>
-									<div class="col-md-2 col-sm-2 ">
+									<div class="col-md-2 col-sm-1 ">
 										<div class="form-group">
 										  <input type="number" min="0" max="100" class="form-control" id="usr">
 										</div>
 									</div>
-								 </div>	
-								 </div>
+								</div>	
 								</div>
 								<div class="clear"></div>
 							</div>
 							
 							
+							
+							
 							<div class="tbheadr borderbtm">
-								<div class="col-md-10 col-sm-10"><h4>Appraisal Stage</h4></div>
-								<div class="col-md-2 col-sm-2 alignr" >
+								<div class="col-md-10 col-sm-9"><h4>Appraisal Stage</h4></div>
+								<div class="col-md-2 col-sm-3 alignr" >
 									<span class="remove"><i class="fa fa-trash" aria-hidden="true"></i></span> 
 									<span class="addrow button-add2"><i class="fa fa-plus" aria-hidden="true"></i></span>
 								</div>
@@ -568,7 +570,7 @@
 								
 								
 								<div class="showhide">
-							<div class="showhiderow">
+							<div class="showhiderow template">
 								<div class="row row-bgcolr">
 									<div class="row-border">
 										<div class="col-md-4 col-sm-4 padlt80 pdtop10 alignr">Competence Objective Type</div>
@@ -589,37 +591,6 @@
 											<option>Select Type</option>
 											<option>Select Type</option>
 											<option>Select Type</option>
-											</select>
-										</div>
-										<div class="col-md-2 col-sm-2 pdtop10 alignr">
-											<span class="remove nobgcolr"><i class="fa fa-trash" aria-hidden="true"></i></span>
-										</div>
-									<div class="clear"></div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="showhiderow">
-								<div class="row row-bgcolr">
-									<div class="row-border">
-										<div class="col-md-4 col-sm-4 padlt80 pdtop10 alignr">Competence Objective Type</div>
-										<div class="col-md-2 col-sm-2">
-											<select class="form-control" id="sel1" >
-											<option>Select Type</option>
-											<option>Select Type</option>
-											<option>Select Type</option>
-											<option>Select Type</option>
-											<option>Select Type</option>
-											</select>
-										</div>
-										<div class="col-md-2 col-sm-2 pdtop10 alignr">Weightage</div>
-										<div class="col-md-2 col-sm-2">
-											<select class="form-control" id="sel1" >
-											<option>25%</option>
-											<option>25%</option>
-											<option>25%</option>
-											<option>25%</option>
-											<option>25%</option>
 											</select>
 										</div>
 										<div class="col-md-2 col-sm-2 pdtop10 alignr">
@@ -793,7 +764,7 @@
 		
 		$(document).on("click", ".button-remove", function(event) {
 			//$(this).closest(".boxclone").remove();			
-			//$(this).closest(".repeatctminr").find(".boxclone").remove();
+			$(this).closest(".repeatctminr").find(".boxclone").remove();
 			
 		});
 		
@@ -809,9 +780,30 @@
 			$(this).closest(".boxclone2").remove();
 		});
 		
+		//clone button3
+		$('.addmore').click(function(){
+			$('.showhiderow.template').clone()
+							  .show()
+							  .removeClass("template")
+							  .insertAfter(".showhiderow:last");
+		}).trigger("click");
+		
+		$(document).on("click", ".remove", function() {
+			$(this).closest(".showhiderow").remove();
+		});
+		
+		
 		//slidetoggle
 		jQuery('.showbtn').on('click', function(event) {        
 			 jQuery('.showhide').slideToggle('show');
+		});
+		
+		$("button.showbtn").click(function(){
+			if ($.trim($(this).text()) === 'Show') {
+				$(this).text('Hide');
+			} else {
+				$(this).text('Show');        
+			}
 		});
 	  
 	   //submenu
@@ -827,7 +819,7 @@
 			// place the submenu in the correct position relevant to the menu item
 			$submenuWrapper.css({
 			  top: menuItemPos.top,
-			  left: menuItemPos.left + Math.round($menuItem.outerWidth() * 0.99)
+			  left: menuItemPos.left + Math.round($menuItem.outerWidth() * 1)
 			});
 		  });
 		});
@@ -835,6 +827,16 @@
 		
 	});
 	
+	//file upload path capture 
+	var input = document.getElementById( 'file-upload' );
+	var infoArea = document.getElementById( 'file-upload-filename' );
+	input.addEventListener( 'change', showFileName );
+	
+	function showFileName( event ) {
+	  var input = event.srcElement;
+	  var fileName = input.files[0].name;
+	  infoArea.textContent = 'File name: ' + fileName;
+	}
 
 	 </script>
   </body>
