@@ -8,6 +8,7 @@
     <title>:: EDGE</title>
 
     <!-- Bootstrap -->
+	<link rel='stylesheet' type='text/css' href='css/timerange.css'/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet'>
@@ -191,7 +192,7 @@
 </div>
 	<section class="leave">
 		<div class="row lvrow">
-			<div class="col-md-2">
+			<div class="col-md-2 col-sm-2">
 				<label class="attlble">From </label>
 				<div class='input-group date' id='datetimepicker1'>										
 					<input type='text' class="form-control" />
@@ -200,7 +201,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-sm-2">
 				<label class="attlble">To </label>
 				<div class='input-group date' id='datetimepicker2'>										
 					<input type='text' class="form-control" />
@@ -209,7 +210,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-sm-2">
 				<select class="selectpicker">
 				  <option>Select Company</option>
 				  <option>Select Company</option>
@@ -217,21 +218,21 @@
 				</select>
 
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-sm-2">
 				<select class="selectpicker">
 				  <option>Select Grade</option>
 				  <option>Select Grade</option>
 				  <option>Select Grade</option>
 				</select>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-sm-2">
 				<select class="selectpicker">
 				  <option>Select Department</option>
 				  <option>Select Department</option>
 				  <option>Select Department</option>
 				</select>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-sm-2">
 				<select class="selectpicker">
 				  <option>Select Designation</option>
 				  <option>Select Designation</option>
@@ -281,7 +282,79 @@
 			<tbody>
 				<tr>
 					<td>1199</td>
-					<td><span class="att-ind prest">P</span></td>
+					<td><span class="att-ind prest pop-open">P</span>
+						<div class="popup-overlay">
+						   <div class="popup-content">
+							  <button class="close cls">x</button>
+								<div class="att-pop-cont">
+									<div class="att-con-col">
+										<div class="pstatus">
+											<label>Status</label><br/>
+											<select class="selectpicker pwidth">
+											  <option>P</option>
+											  <option>P</option>
+											  <option>P</option>
+											</select>
+										</div>
+										<div class="pstatus">
+											<label>In Time 1</label><br/>
+											<input type="text" class="pinput">
+											<div class="popp">
+												<h5>Select Time</h5> <button class="closetime">X</button>
+												<div id="time-range" class="time-range">
+													<div class="sliders_step1">
+														<div id="slider-range"></div>
+													</div>
+												</div>
+												<div class="disTime"><span class="slider-time">9 : 00 AM </span> <div class="spacebar">-</div> <span class="slider-time2">5 : 00 PM</span></div> 
+												<div class="saveTimebtn"><button type="button" class="btn btn-success center-block" id="save-event">Save</button></div>
+												<div class="clear"></div>
+											</div>
+										</div>
+										<div class="pstatus">
+											<label>In Time 2</label><br/>
+											<input type="text" class="pinput">
+										</div>
+										<div class="pstatus">
+											<label>OT</label><br/>
+											<input type="text" class="pinput">
+										</div>
+										<div class="pstatus">
+											<label>Working Hours</label>
+											<input type="text" class="pinput">
+										</div>											
+									</div>
+									<div class="att-con-col">
+										<div class="pstatus">
+											<label>Status</label><br/>
+											<select class="selectpicker pwidth">
+											  <option>P</option>
+											  <option>P</option>
+											  <option>P</option>
+											</select>
+										</div>
+										<div class="pstatus">
+											<label>Out Time 1</label><br/>
+											<input type="text" class="pinput">
+										</div>
+										<div class="pstatus">
+											<label>Out Time 2</label><br/>
+											<input type="text" class="pinput">
+										</div>
+										<div class="pstatus">
+											<label>Special OT</label><br/>
+											<input type="text" class="pinput">
+										</div>
+										<div class="pstatus">
+											<label>Lateness</label>
+											<input type="text" class="pinput">
+										</div>	
+									</div>
+								</div>
+								<button class="sub-btn">Submit</button>
+							</div>
+						</div>						
+					</td>
 					<td><span class="att-ind absent">A</span></td>
 					<td><span class="att-ind holi">H</span></td>
 					<td><span class="att-ind weeknd">W</span></td>
@@ -403,15 +476,10 @@
 	</table>
 	<!--attendance multiple popups-->
 	<div class="atten-popup">
-		<div class="popup-overlay">
-		  <!--Creates the popup content-->
-		   <div class="popup-content">
-			  <h2>Pop-Up</h2>
-			  <p> This is an example pop-up that you can make using jQuery.</p>
-			 <!--popup's close button-->
-			  <button class="close">Close</button>    </div>
-		</div>
+		
 	</div>	
+	<!--<button class="pop-open">Open</button>-->
+	
   </div>
   </section>
 		<nav aria-label="Page navigation pag_nav">
@@ -436,7 +504,10 @@
 	<script src="js/vertical-responsive-menu.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-	 
+	<!--time range select-->
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="js/timerange.js"></script>
+	
 	<script>
 	 $(document).ready(function(){
 	  
@@ -471,7 +542,33 @@
 			});
 		});
 		
+		//atten-popup
+		$(".pop-open").on("click", function(){
+		  $(".popup-overlay, .popup-content").addClass("active");
+		});
+		//removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+		$(".close").on("click", function(){
+		  $(".popup-overlay, .popup-content").removeClass("active");
+		});
 	  
+	  //show popup time select
+	  $(".pstatus input").focus(function() {
+		  $('.popp').show();       
+		  //return false;
+		});
+		/*$('.pstatus input').blur(function(){
+			if( !$(this).val() ) {
+				  $('.popp').hide('slow');
+			}
+		});*/
+		//hide time popup
+		$(".closetime").click(function(){
+			$(".popp").hide();
+		});
+		$("#save-event").click(function(){
+			$(".popp").hide();
+		});
+			
 	});
 	
 	 

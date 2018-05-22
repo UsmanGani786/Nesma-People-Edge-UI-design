@@ -1368,7 +1368,7 @@ for better animation effect */
 .atten_grid th:last-child{border-right:solid 0px #ccc;}
 .atten_grid td:first-child{font-weight:bold; text-decoration:underline;}
 .table-responsive{padding-left: 0px; padding-right:0px;}
-.att-ind{background: #ccc; padding: 2px;border-radius: 3px; width: 22px; float: left; text-align: center; color: #fff;font-weight:bold; margin-left:14px;}
+.att-ind{background: #ccc; padding: 2px;border-radius: 3px; width: 22px; float: left; text-align: center; color: #fff;font-weight:bold; margin-left:14px; cursor:pointer;}
 .prest{background: #00a551;}
 .absent{background: #e84b3c;}
 .holi{background: #e67f22;}
@@ -1379,6 +1379,45 @@ for better animation effect */
 .trav{background: #fb427b;}
 .vac-lev{background: #cc6232;}
 
+
+.popup-overlay{
+  /*Hides pop-up when there is no "active" class*/
+  visibility:hidden;
+  position:absolute;
+  background:#ffffff;
+  box-shadow:0px 0px 15px 3px #ccc;
+  width:265px;
+  min-height:300px;
+      margin: 15px 0px 0px 25px;
+	  border-radius:5px;
+}
+.popup-overlay.active{
+  /*displays pop-up when "active" class is present*/
+  visibility:visible;
+  text-align:center;
+}
+
+.popup-content {
+  /*Hides pop-up content when there is no "active" class */
+ visibility:hidden;
+ padding:10px;
+}
+.cls{margin-top:-10px; font-size:18px;}
+.popup-content.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility:visible;
+}
+.pstatus{padding-bottom:10px;}
+.att-pop-cont{display:table; table-layout:fixed; width:100%;margin-top:15px;}
+.att-con-col{ display:table-cell; text-align:left;}
+.pwidth{width:96px; padding: 5px 5px;}
+.pinput{ border: 1px solid #ccc; border-radius: 4px; padding: 5px; width: 96px;}
+.sub-btn{background:#09bde2; border:none; border-radius:5px; padding:5px 10px; color:#fff;}
+.popp{background: #fff; position: absolute;border-radius: 3px; padding: 10px 0px;width: 90%;box-shadow:0px 0px 8px 2px #ccc; }
+.popp h5{float:left; padding-left:10px; margin:0px;}
+.time-range{margin-top:30px;}
+.closetime{margin-right:5px;}
+.saveTimebtn{margin-bottom:10px;}
 
 /* Mobile */	
 @media screen and (max-width:480px)
