@@ -179,10 +179,11 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Rajesh Kumar</b> &nbsp; <img src="img/profile_img.png" class="profile" /></a>
           <ul class="dropdown-menu" style="margin-top: -8px !important;">
             <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#myModal">Profile</a></li>
 			<li><a href="#">Logout</a></li>
             
           </ul>
+			
         </li>
 		
       </ul>
@@ -281,7 +282,64 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>1199</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1199</a>
+					
+					<div class="modal fade top40" id="myModal" role="dialog">
+						<div class="modal-dialog model-wdt">
+						
+						  <!-- Modal content-->
+						  <div class="modal-content pddbtm15">
+							<div class="modal-header model-padd15">
+							  <button type="button" class="close" data-dismiss="modal">&times;</button>
+							  <h4 class="modal-title">Employee Info</h4>
+							</div>
+							<div class="modal-body">
+							  <div class="col-md-2 col-sm-2"><img src="img/profile_img.png"/></div>
+							  <div class="col-md-10 col-sm-10">
+								<table width="100%" class="emp-info">
+									<tr>
+										<td width="40%">Employee Name:</td> <td width="60%">Amaro Mohammed Abbas</td>
+									</tr>
+									<tr>
+										<td>Department:</td> <td>Design Deportment</td>
+									</tr>
+									<tr>
+										<td>Designation:</td> <td>Software Engineer</td>
+									</tr>							
+								</table>
+							  </div>
+							  <div class="personal-info"><h4>Personal Info</h4></div>
+							  <div class="personal-cont">
+								  <table width="100% class="emp-info">
+									<tr>
+										<td width="50%"><label>Employee Code</label> <input type="text" class="form-control" placeholder="1199"></td> 
+										<td width="50%"><label>Saluation</label> <input type="text" class="form-control" placeholder="Mr."></td>
+									</tr>
+									<tr>
+										<td><label>First Name</label> <input type="text" class="form-control" placeholder="First Name"></td>
+										<td><label>Middle Name</label> <input type="text" class="form-control" placeholder="Middle Name"></td>
+									</tr>
+									<tr>
+										<td><label>Last Name</label> <input type="text" class="form-control" placeholder="Last Name"></td>
+										<td><label>Email Id</label> <input type="text" class="form-control" placeholder="Email Id"></td>
+									</tr>
+									<tr>
+										<td><label>Date of Birth</label> <input type="text" class="form-control" placeholder="Date of Birth" id="datetimepicker3"> </td>
+										<td><label>Age</label> <input type="text" class="form-control" placeholder="27"></td>
+									</tr>
+									<tr>
+										<td><label>Nationality</label> <input type="text" class="form-control" placeholder="Nationality"></td>
+										<td><label>Religion</label> <input type="text" class="form-control" placeholder="Religion"></td>
+									</tr>
+								  </table>
+							  </div>
+							  
+							</div>
+						  </div>
+						  
+						</div>
+					</div>
+					</td>
 					<td><span class="att-ind prest pop-open">P</span>
 						<div class="popup-overlay">
 						   <div class="popup-content">
@@ -306,8 +364,8 @@
 														<div id="slider-range"></div>
 													</div>
 												</div>
-												<div class="disTime"><span class="slider-time">9 : 00 AM </span> <div class="spacebar">-</div> <span class="slider-time2">5 : 00 PM</span></div> 
-												<div class="saveTimebtn"><button type="button" class="btn btn-success center-block" id="save-event">Save</button></div>
+												<!--<div class="disTime"><span class="slider-time">9 : 00 AM </span> <div class="spacebar">-</div> <span class="slider-time2">5 : 00 PM</span></div>--> 
+												<div class="saveTimebtn"><button type="button" class="btn btn-success center-block" id="save-event">Ok</button></div>
 												<div class="clear"></div>
 											</div>
 										</div>
@@ -324,9 +382,9 @@
 											<input type="text" class="pinput">
 										</div>											
 									</div>
-									<div class="att-con-col">
+									<div class="att-con-col pdlft20">
 										<div class="pstatus">
-											<label>Status</label><br/>
+											<label>Early Leaving</label><br/>
 											<select class="selectpicker pwidth">
 											  <option>P</option>
 											  <option>P</option>
@@ -368,7 +426,7 @@
 					<td><span class="att-ind prest">P</span></td>
 				</tr>
 				<tr>
-					<td>1110</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1110</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
@@ -383,7 +441,7 @@
 					<td><span class="att-ind prest">P</span></td>
 				</tr>
 				<tr>
-					<td>1111</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1111</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
@@ -398,7 +456,7 @@
 					<td><span class="att-ind prest">P</span></td>
 				</tr>
 				<tr>
-					<td>1112</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1112</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind dec">D</span></td>
 					<td><span class="att-ind vac">V</span></td>
@@ -413,7 +471,7 @@
 					<td><span class="att-ind vac-lev">VL</span></td>
 				</tr>
 				<tr>
-					<td>1113</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1113</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind absent">A</span></td>
 					<td><span class="att-ind holi">H</span></td>
@@ -428,7 +486,7 @@
 					<td><span class="att-ind prest">P</span></td>
 				</tr>
 				<tr>
-					<td>1114</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1114</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
@@ -443,7 +501,7 @@
 					<td><span class="att-ind prest">P</span></td>
 				</tr>
 				<tr>
-					<td>1115</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1115</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind prest">P</span></td>
@@ -458,7 +516,7 @@
 					<td><span class="att-ind prest">P</span></td>
 				</tr>
 				<tr>
-					<td>1116</td>
+					<td><a href="#" data-toggle="modal" data-target="#myModal">1116</a></td>
 					<td><span class="att-ind prest">P</span></td>
 					<td><span class="att-ind dec">D</span></td>
 					<td><span class="att-ind vac">V</span></td>
@@ -568,7 +626,10 @@
 		$("#save-event").click(function(){
 			$(".popp").hide();
 		});
-			
+		
+		
+		
+		
 	});
 	
 	 

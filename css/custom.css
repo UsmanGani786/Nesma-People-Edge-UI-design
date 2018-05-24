@@ -123,7 +123,7 @@ font-size: 12px !important;      border-top-left-radius: 20px;    border-bottom-
 .menu--icon{width:32px !important; height:auto !important;margin: 6px 10px;}
 .collapse_menu:hover{color:#fff;}
 .menu--item{padding:10px 0 0; }
-  border-bottom-image:url('img/border.png');
+ /*border-bottom-image:url('img/border.png');*/
 .menu--item:last-child{border:none !important;}
 .menu--link:hover, .menu--link:hover .menu--label, .sub_menu--link:hover{background:transparent;}
 a:focus, a:hover{text-decoration:none;}
@@ -183,7 +183,7 @@ a:focus, a:hover{text-decoration:none;}
 /* Leave Popup */
 
 .modal-content{overflow:hidden; padding-bottom:0px;}
-.modal-header{border:none !important;}
+.modal-header{/*border:none !important;*/}
 .leave_cont{padding:20px; margin-top: -62px;}
 .modal-header .close {
     background: #d41111;
@@ -1260,6 +1260,7 @@ for better animation effect */
 .mrlftng15{margin-left: -15px;}
 .mrlftng50{margin-left: -50px;}
 .mrlftng5{margin-left: -1px; font-size:18px;}
+.pddbtm15{padding-bottom:15px;}
 
 .tbhd{display:table; table-layout: fixed;}
 .tbrw{ display:table-cell; padding:10px;}
@@ -1361,12 +1362,13 @@ for better animation effect */
 
 /*Attendance page*/
 .lvrow{margin-bottom:20px;}
-.selectpicker{padding: 8px 20px; border-radius: 5px; width:155px;}
+.selectpicker{padding: 8px 10px; border-radius: 5px; width:155px;}
 .attlble{float:left; padding-top: 8px; padding-right: 5px;}
-.atten_grid th{border:solid 1px #ccc;}
+.atten_grid th{border:solid 1px #f1f1f1;}
 .atten_grid th:first-child{border-left:solid 0px #ccc;}
 .atten_grid th:last-child{border-right:solid 0px #ccc;}
-.atten_grid td:first-child{font-weight:bold; text-decoration:underline;}
+.atten_grid td a{font-weight:bold; text-decoration:underline; outline:none;}
+.atten_grid td a:hover{text-decoration:underline !important;}
 .table-responsive{padding-left: 0px; padding-right:0px;}
 .att-ind{background: #ccc; padding: 2px;border-radius: 3px; width: 22px; float: left; text-align: center; color: #fff;font-weight:bold; margin-left:14px; cursor:pointer;}
 .prest{background: #00a551;}
@@ -1413,11 +1415,23 @@ for better animation effect */
 .pwidth{width:96px; padding: 5px 5px;}
 .pinput{ border: 1px solid #ccc; border-radius: 4px; padding: 5px; width: 96px;}
 .sub-btn{background:#09bde2; border:none; border-radius:5px; padding:5px 10px; color:#fff;}
-.popp{background: #fff; position: absolute;border-radius: 3px; padding: 10px 0px;width: 90%;box-shadow:0px 0px 8px 2px #ccc; }
+.popp{background: #fff; position: absolute;border-radius: 3px; padding: 10px 0px;width: 90%;box-shadow:0px 0px 8px 2px #ccc; display:none;}
 .popp h5{float:left; padding-left:10px; margin:0px;}
 .time-range{margin-top:30px;}
 .closetime{margin-right:5px;}
 .saveTimebtn{margin-bottom:10px;}
+.top40{top:10%;}
+.emp-info td{padding:5px;}
+.emp-info td:nth-child(2){font-weight:bold;}
+.personal-info{background:#f1f1f1; float:left; width:105%; margin-left:-15px; padding-left:15px;}
+.personal-info h4{ font-weight:normal; font-size:16px;}
+.personal-cont{float:left; width:100%;}
+.personal-cont td{padding:5px 15px;}
+.personal-cont td label{margin:0px;}
+.model-padd15{padding:10px 15px;}
+.model-wdt{width:400px; font-size:11px;}
+.personal-cont .form-control{font-size:12px !important;} 
+
 
 /* Mobile */	
 @media screen and (max-width:480px)
@@ -1464,10 +1478,12 @@ for better animation effect */
 @media(max-width:991px){
 	.dashboardholder{display:none;}
 	.leave_charts li {margin: 6px 10px;}
-	.menu .header{display:none;}	
+	.menu .header{display:none;}
+	.selectpicker{width:120px;}
 }
 @media(max-width:768px){
 .collapse_menu{background:#fff !important;}
+.selectpicker{width:120px;}
 }
 @media(max-width:1200px) {
 	.leave_charts li {margin: 6px 10px;}
@@ -1476,6 +1492,7 @@ for better animation effect */
 	.leave_charts li {margin: 6px 5px;}
 	.swiper-slide {padding: 0px 5px;}
 	.leave_charts li{margin: 6px 5px }
+	.selectpicker{width:120px;}
 }
 
 .swiper-slide {padding: 0px 5px;}
