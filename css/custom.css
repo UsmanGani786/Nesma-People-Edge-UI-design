@@ -1432,6 +1432,22 @@ for better animation effect */
 .model-wdt{width:400px; font-size:11px;}
 .personal-cont .form-control{font-size:12px !important;} 
 
+/*header icons*/
+.nobrd{min-width:200px;}
+.nobrd li{border:none; float: left; padding: 10px 3px;}
+.nobrd li span i{color:#1dbee8; font-size:30px !important;}
+.nobrd li a label{ font-size:11px;}
+.nobrd li a{text-align:center;}
+.prof-name{float:left;padding-top:25px;}
+.alerts-wrapp{width:260px;}
+.dropdown-menu .nav-tabs li{padding-bottom:0px; border-bottom:0px;}
+.alerts-wrapp .nav-tabs>li.active>a {border-top: 3px solid #1dbee8;}
+.alerts-wrapp .nav-tabs>li {margin-bottom: -2px;}
+.alerts-wrapp .nav>li>a{padding: 6px 15px;}
+.alerts-wrapp .tab-content {font-size:12px; padding-top:10px; padding-left:5px;}
+.actionsbtn{background: none;border: solid 1px #ccc;float: right;}
+#home p{border-bottom:solid 1px #f0f0f0; margin-bottom:5px; padding-bottom:10px;}    
+    
 
 /* Mobile */	
 @media screen and (max-width:480px)

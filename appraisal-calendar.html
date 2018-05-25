@@ -150,31 +150,49 @@
 		</div>
       </form>
       <ul class="nav navbar-nav navbar-right">
-		 <li class="dropdown boxes">
+		<li class="dropdown boxes">
           <a href="#" class="dropdown-toggle boxes" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-th" aria-hidden="true" ></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-            
+          <ul class="dropdown-menu nobrd">
+            <li class="col-md-6"><a href="#"><span><i class="fa fa-envelope" aria-hidden="true"></i></span><br/> <label>Mailbox</label> </a></li>
+            <li class="col-md-6"><a href="#"><span><i class="fa fa-comments" aria-hidden="true"></i></span><br/> <label>Chat</label></a></li>
+			<li class="col-md-6"><a href="#"><span><i class="fa fa-code" aria-hidden="true"></i></span><br/> <label>Impersonation</label></a></li>
+			<li class="col-md-6"><a href="#"><span><i class="fa fa-user-circle-o" aria-hidden="true"></i><br/> <label>User Profile</label></span></a></li>
           </ul>
         </li>
         <li>
 			<select class="sel_lang">
-            <option>Arabic</option>
+             <option>Arabic</option>
              <option>French</option>
-            
 			</select>
         </li>
-		 <li class="dropdown">
+		<li class="dropdown keep-inside-clicks-open">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell-o" aria-hidden="true" style="font-weight: bold;"></i> <span class="notification">2</span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+            <li>
+				<div class="alerts-wrapp">
+					<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#home">Notification</a></li>
+					<li><a data-toggle="tab" href="#menu1">Actions</a></li>
+				  </ul>
+				  <div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+					  <p>You Have No Notifications.</p>
+					  <p>Some message to read...</p>
+					</div>
+					<div id="menu1" class="tab-pane fade">
+					  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					  <button class="btn actionsbtn">See All Actions</button>
+					</div>
+				  </div>
+				</div>
+			</li>
+            
             
           </ul>
         </li>
+		<li><span class="prof-name"><b>Rajesh Kumar</b></span> &nbsp; </li>
 		 <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Rajesh Kumar</b> &nbsp; <img src="img/profile_img.png" class="profile" /></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/profile_img.png" class="profile" /></a>
           <ul class="dropdown-menu" style="margin-top: -8px !important;">
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
@@ -827,6 +845,12 @@
 		
 	});
 	
+	//dropdown stays
+	$(document).on('click.bs.dropdown.data-api', '.dropdown.keep-inside-clicks-open', function (e) {
+	  e.stopPropagation();
+	});
+		
+		
 	//file upload path capture 
 	var input = document.getElementById( 'file-upload' );
 	var infoArea = document.getElementById( 'file-upload-filename' );
